@@ -7,15 +7,16 @@ export default {
     }
   },
   methods: {
-   showSum: function() {
-    alert(this.num1 + this.num2);
+   showSum: function(num) {
+    alert(num * num);
    }
   }
 }
 </script>
 
 <template>
-  <div>{{ showSum() }}</div>
+  <button @click="showSum(2)">Click Me!</button>
+  <button @click="showSum(3)">Let`Go</button>
 </template>
 
 <style scoped></style>
