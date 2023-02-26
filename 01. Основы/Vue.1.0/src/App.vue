@@ -13,7 +13,7 @@ export default {
 </script>
 
 <template>
-  <div>{{ showTime() }}</div>
+  <button @mouseover="showTime">Click me!</button>
 </template>
 
 <style scoped></style>
