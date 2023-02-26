@@ -1,19 +1,21 @@
 <script>
 export default {
   data() {
-    
+    return {
+      num1: 5,
+      num2: 5
+    }
   },
   methods: {
-    showTime: function() {
-      let time = new Date;
-      alert(time)
-    }
+   showSum: function() {
+    alert(this.num1 + this.num2);
+   }
   }
 }
 </script>
 
 <template>
-  <button @mouseover="showTime">Click me!</button>
+  <div>{{ showSum() }}</div>
 </template>
 
 <style scoped></style>
