@@ -2,21 +2,22 @@
 export default {
   data() {
     return {
+      text: 'Hello world!',
       num1: 5,
       num2: 5
     }
   },
   methods: {
-   showSum: function(num) {
-    alert(num * num);
+   change: function(newText) {
+    this.text = newText;
    }
   }
 }
 </script>
 
 <template>
-  <button @click="showSum(2)">Click Me!</button>
-  <button @click="showSum(3)">Let`Go</button>
+  <div>{{ text }}</div>
+  <button @click="change('How are you?')">Click Me!</button>
+  <button @click="change('I am fine!')">Let`Go</button>
 </template>
 
-<style scoped></style>
