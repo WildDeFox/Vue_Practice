@@ -1,15 +1,19 @@
 <script>
 export default {
-  data () {
-    return {
-      obj: {a: 1, b:2, c:3}
+  data() {
+    
+  },
+  methods: {
+    showTime: function() {
+      let time = new Date;
+      alert(time)
     }
   }
 }
 </script>
 
 <template>
-  <div>{{ obj['a'] + obj['b'] + obj['c'] }}</div>
+  <div>{{ showTime() }}</div>
 </template>
 
 <style scoped></style>
