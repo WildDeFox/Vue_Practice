@@ -2,16 +2,14 @@
 export default {
   data() {
     return {
-      hrefs: [
-        { href: "1.html", text: "text1" },
-        { href: "2.html", text: "text2" },
-        { href: "3.html", text: "text3" },
-      ],
+      items: [1, -2, 3, -4, 5],
     };
   },
 };
 </script>
 
 <template>
-  <p v-for="num in 30">{{ num }}</p>
+  <ul v-for="elem in items">
+    <li v-if="elem > 0">{{ elem }}</li>
+  </ul>
 </template>
