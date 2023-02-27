@@ -13,9 +13,5 @@ export default {
 </script>
 
 <template>
-  <ul>
-    <template v-for="elem in hrefs">
-      <li><a :href="elem.href">{{ elem.text }}</a></li>
-    </template>
-  </ul>
+  <p v-for="num in 30">{{ num }}</p>
 </template>
