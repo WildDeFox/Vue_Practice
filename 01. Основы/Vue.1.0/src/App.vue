@@ -22,5 +22,6 @@ export default {
 <template>
   <div>{{ price }}</div>
   <button @click="change()">Ещё один!</button>
+  <a @click.prevent href="google.com">Link</a>
 </template>
 
