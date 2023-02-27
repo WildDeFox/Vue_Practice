@@ -2,7 +2,7 @@
 export default {
   data() {
     return {
-      items: [1, 2, 3, 4, 5]
+      arr: ['x', 'y', 'z']
     }
   },
   methods: {
@@ -14,10 +14,8 @@ export default {
 </script>
 
 <template>
-  <div v-for="elem in items">{{ elem }}</div>
-  <div v-for="elem in items">{{ elem ** 2 }}</div>
-  <ul v-for="elem in items">
-    <li>{{ elem }}</li>
+  <ul v-for="(elem, key) in arr">
+    <li>{{ key }}</li>
   </ul>
 </template>
 
