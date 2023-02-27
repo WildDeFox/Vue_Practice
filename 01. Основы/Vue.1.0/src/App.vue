@@ -2,7 +2,7 @@
 export default {
   data() {
     return {
-     text: '',
+     checked: true,
     };
   },
   methods: {
@@ -12,8 +12,8 @@ export default {
 </script>
 
 <template>
-  <p>{{ text }}</p>
-  <textarea v-model="text"></textarea>
+  <input type="checkbox" v-model="checked">
+  <p>{{ checked ? "yes" : " " }}</p>
 </template>
 
 <style></style>
