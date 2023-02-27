@@ -2,17 +2,23 @@
 export default {
   data() {
     return {
-      age: 14
+      visible: true
     }
   },
   methods: {
+    hide: function() {
+      this.visible = !this.visible
+    }
   }
 }
 </script>
 
 <template>
-  <p v-if="age < 18">Подросток</p>
-  <p v-if="age >= 19 && age <= 25">Молодой человек</p>
-  <p v-if="age >= 26">Мужчина</p>
+  <div v-if="visible">
+    <p>++++</p>
+    <p>++++</p>
+    <p>++++</p>
+  </div>
+  <button @click="hide">Hide</button>
 </template>
 
