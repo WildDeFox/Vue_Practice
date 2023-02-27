@@ -26,3 +26,9 @@ export default {
     <li v-for="elem in products" :key="elem.id">{{ elem.name }}</li>
   </ul>
 </template>
+
+<style>
+li {
+  color: red
+}
+</style>
