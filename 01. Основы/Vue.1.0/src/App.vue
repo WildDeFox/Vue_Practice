@@ -16,6 +16,7 @@ export default {
           name: "product3",
         },
       ],
+      cssClasses: 'red active'
     };
   },
 };
@@ -23,12 +24,12 @@ export default {
 
 <template>
   <ul>
-    <li v-for="elem in products" :key="elem.id">{{ elem.name }}</li>
+    <li :class="cssClasses" v-for="elem in products" :key="elem.id">{{ elem.name }}</li>
   </ul>
 </template>
 
 <style>
-li {
+.red {
   color: red
 }
 </style>
