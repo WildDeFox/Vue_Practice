@@ -16,7 +16,10 @@ export default {
           name: "product3",
         },
       ],
-      cssClasses: 'red active'
+      cssClasses: {
+        red: false,
+        active: true
+      }
     };
   },
 };
@@ -31,5 +34,9 @@ export default {
 <style>
 .red {
   color: red
+}
+
+.active {
+  color: yellow
 }
 </style>
