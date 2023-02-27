@@ -2,13 +2,24 @@
 export default {
   data() {
     return {
-      visible1: false,
+      visible: false,
     }
   },
+  methods: {
+    click: function() {
+      this.visible = true
+    },
+
+    hide: function() {
+      this.visible = false
+    }
+  }
 }
 </script>
 
 <template>
-  <div v-if="!visible1">Hello world!</div>
+  <p v-if="visible">Hello World!</p>
+  <button v-if="!visible" @click="click">Показать</button>
+  <button v-if="visible" @click="hide">Скрыть</button>
 </template>
 
