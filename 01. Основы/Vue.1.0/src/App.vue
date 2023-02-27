@@ -2,26 +2,15 @@
 export default {
   data() {
     return {
-      cost: 154,
-      amount: 1
+      visible1: false,
+      visible2: true,
     }
   },
-  methods: {
-   change: function() {
-    this.amount++
-   }
-  },
-  computed: {
-    price: function() {
-      return this.cost * this.amount;
-    }
-  }
 }
 </script>
 
 <template>
-  <div>{{ price }}</div>
-  <button @click="change()">Ещё один!</button>
-  <a @click.prevent href="google.com">Link</a>
+  <div v-if="visible1">Hello world!</div>
+  <div v-if="visible2">How are you?</div>
 </template>
 
