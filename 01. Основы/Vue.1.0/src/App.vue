@@ -2,7 +2,7 @@
 export default {
   data() {
     return {
-     choice: '',
+     selected: 'Новосибирск',
     };
   },
   methods: {
@@ -14,8 +14,10 @@ export default {
 </script>
 
 <template>
-  <input type="radio" name="radio" v-model="choice" value="v1">Русский 
-  <input type="radio" name="radio" v-model="choice" value="v2">Французский
-  <input type="radio" name="radio" v-model="choice" value="v3">Немецкий
-  <button @click="show">Click me!</button>
+  <select v-model="selected">
+    <option>Москва</option>
+    <option>Новосибирск</option>
+    <option>Санкт-Петербург</option>
+  </select>
+  <p>{{ selected }}</p>
 </template>
