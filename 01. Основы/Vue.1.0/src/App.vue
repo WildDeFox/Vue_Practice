@@ -2,18 +2,20 @@
 export default {
   data() {
     return {
-     checked: true,
+     arr: [],
     };
   },
   methods: {
-   
+   show: function() {
+    console.log(this.arr)
+   }
   },
 };
 </script>
 
 <template>
-  <input type="checkbox" v-model="checked">
-  <p>{{ checked ? "yes" : " " }}</p>
+  <input type="checkbox" v-model="arr" value="v1">
+  <input type="checkbox" v-model="arr" value="v2">
+  <input type="checkbox" v-model="arr" value="v3">
+  <button @click="show">Click me!</button>
 </template>
-
-<style></style>
