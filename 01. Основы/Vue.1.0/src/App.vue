@@ -2,7 +2,8 @@
 export default {
   data() {
     return {
-     selected: 'Новосибирск',
+     selected: 'Понедельник',
+     options: ['Понедельник', "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"],
     };
   },
   methods: {
@@ -15,9 +16,7 @@ export default {
 
 <template>
   <select v-model="selected">
-    <option>Москва</option>
-    <option>Новосибирск</option>
-    <option>Санкт-Петербург</option>
+    <option v-for="option in options">{{ option }}</option>
   </select>
   <p>{{ selected }}</p>
 </template>
