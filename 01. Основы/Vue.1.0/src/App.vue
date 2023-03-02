@@ -11,6 +11,6 @@
 </script>
 
 <template>
-  <User name="Nikita" surn="Kapurin"/>
+  <User name="Nikita" surn="Kapurin" :args="['item1', 'item2', 'item3']"/>
   <Employee name="Jhon" surn="Smit" age="28"/>
 </template>
