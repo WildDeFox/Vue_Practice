@@ -11,6 +11,6 @@
 </script>
 
 <template>
-  <User />
-  <Employee />
+  <User name="Nikita" surn="Kapurin"/>
+  <Employee name="Jhon" surn="Smit" age="28"/>
 </template>
