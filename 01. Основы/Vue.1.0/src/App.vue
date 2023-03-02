@@ -2,21 +2,18 @@
 export default {
   data() {
     return {
-     selected: 'Понедельник',
-     options: ['Понедельник', "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"],
+     isDisabled: true,
     };
   },
   methods: {
-   show: function() {
-    console.log(this.choice)
+   click: function() {
+    this.isDisabled = !this.isDisabled
    }
   },
 };
 </script>
 
 <template>
-  <select v-model="selected">
-    <option v-for="option in options">{{ option }}</option>
-  </select>
-  <p>{{ selected }}</p>
+  <input type="text" v-bind:disabled="isDisabled">
+  <input type="checkbox" @click="click">Блокировать / Разблокировать
 </template>
