@@ -2,25 +2,42 @@
 export default {
   data() {
     return {
-      arr: ["item1", "item2", "item3", "item4"],
-      newItem: '',
+      users: [
+        {
+          id: 1,
+          name: "name1",
+          surn: "surn1",
+        },
+        {
+          id: 2,
+          name: "name2",
+          surn: "surn2",
+        },
+        {
+          id: 3,
+          name: "name3",
+          surn: "surn3",
+        },
+      ],
+      newItem: "",
     };
   },
   methods: {
-    addItem: function() {
-      this.arr.push(this.newItem)
+    removeItem: function (id) {
+      this.users = this.users.filter((user) => {
+        return user.id !== id;
+      })
     },
-    removeItem: function(index) {
-      this.arr.splice(index, 1)
-    }
   },
 };
 </script>
 
 <template>
   <ul>
-    <li v-for="(item, index) in arr" :key="index" @click="removeItem(index)">{{ item }}</li>
+   <li v-for="user in users" :key="user.id">
+      {{ user.name }}
+      {{ user.surn }}
+      <button @click="removeItem(user.id)">remove</button>
+  </li>
   </ul>
-  <input type="text" v-model="newItem">
-  <button @click="addItem">Добавить</button>
 </template>
