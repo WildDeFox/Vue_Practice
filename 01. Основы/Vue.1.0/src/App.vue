@@ -2,31 +2,22 @@
 export default {
   data() {
     return {
-      text: "",
-      pageText: "",
-      linkText: "",
+      arr: ["item1", "item2", "item3", "item4"],
+      newItem: '',
     };
   },
   methods: {
-    clickEnter: function () {
-      this.pageText = this.text;
-    },
-    clikcLinkLeft: function () {
-      this.linkText = "Левая кнопка мыши";
-    },
-    clickLinkRight: function () {
-      this.linkText = "Правая кнопка мыши";
-    },
-    clickLinkMidle: function () {
-      this.linkText = "Средняя кнопка мыши";
+    addItem: function() {
+      this.arr.push(this.newItem)
     }
   },
 };
 </script>
 
 <template>
-  <input type="text" v-model="text" @keyup.enter="clickEnter" />
-  <p>{{ pageText }}</p>
-  <a href="#" @click.prevent @click.ctrl.left="clikcLinkLeft" @click.ctrl.right="clickLinkRight" @click.ctrl.middle="clickLinkMidle">Ссылка</a>
-  <p>{{ linkText }}</p>
+  <ul>
+    <li v-for="(item, index) in arr" :key="index">{{ item }}</li>
+  </ul>
+  <input type="text" v-model="newItem">
+  <button @click="addItem">Добавить</button>
 </template>
