@@ -9,6 +9,9 @@ export default {
   methods: {
     addItem: function() {
       this.arr.push(this.newItem)
+    },
+    removeItem: function(index) {
+      this.arr.splice(index, 1)
     }
   },
 };
@@ -16,7 +19,7 @@ export default {
 
 <template>
   <ul>
-    <li v-for="(item, index) in arr" :key="index">{{ item }}</li>
+    <li v-for="(item, index) in arr" :key="index" @click="removeItem(index)">{{ item }}</li>
   </ul>
   <input type="text" v-model="newItem">
   <button @click="addItem">Добавить</button>
