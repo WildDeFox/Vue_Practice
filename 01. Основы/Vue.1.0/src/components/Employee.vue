@@ -1,6 +1,11 @@
 <script>
   export default {
-    props: ['name', 'surn', 'age', 'salary'],
+    props: {
+      name: String,
+      surn: String, 
+      age: Number,
+      salary: Number
+    },
     data() {
       return {
     
