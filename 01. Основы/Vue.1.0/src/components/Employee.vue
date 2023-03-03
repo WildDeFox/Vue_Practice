@@ -6,20 +6,18 @@
       age: Number,
       salary: Number
     },
-    emits: ['showClick'],
+    emits: ['remove'],
     data() {
       return {
     
       }
     },
     methods: {
-      handle () {
-        this.$emit('showClick')
-      }
+      
     }
   }
 </script>
 <template>
   <p>{{ name }} {{ surn }} {{ age }} {{ salary }}</p>
-  <button @click="handle">Show me click!</button>
+  <button @click="$emit('remove', id)">remove</button>
 </template>
