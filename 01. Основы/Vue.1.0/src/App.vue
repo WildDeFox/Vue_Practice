@@ -31,12 +31,10 @@ export default {
     };
   },
   methods: {
-    func() {
-      alert('xxx');
-    },
-    showClick() {
-      alert('yyy');
-      console.log('main click')
+    remove(id) {
+      this.users = this.users.filter((user) => {
+        return user.id !== id;
+      })
     }
   },
   components: {
@@ -47,12 +45,14 @@ export default {
 </script>
 
 <template>
-  <User name="Nikita" surn="Kapurin" :args="['item1', 'item2', 'item3']" @show="func"/>
-  <Employee @show="showClick" v-for="user in users"
+  <User name="Nikita" surn="Kapurin" :args="['item1', 'item2', 'item3']"/>
+  <Employee v-for="user in users"
   :name="user.name"
   :surn="user.surn"
   :age="user.age"
   :salary="user.salary"
+  @remove="remove"
   :key="user.id" 
+  
   />
 </template>
