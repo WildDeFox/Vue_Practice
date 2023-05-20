@@ -12,9 +12,6 @@
     
       }
     },
-    methods: {
-      
-    }
   }
 </script>
 <template>
